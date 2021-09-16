@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudForm">
         <activity
-            android:name="com.example.formcloud.MainActivity"
+            android:name="com.example.formcloud.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
