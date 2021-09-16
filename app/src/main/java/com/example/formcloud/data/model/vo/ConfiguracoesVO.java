@@ -1,4 +1,4 @@
-package com.example.formcloud.vo;
+package com.example.formcloud.data.model.vo;
 
 public class ConfiguracoesVO {
     // Configs do Currículo
