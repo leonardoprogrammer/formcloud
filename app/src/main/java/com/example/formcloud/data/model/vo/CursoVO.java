@@ -1,5 +1,7 @@
 package com.example.formcloud.data.model.vo;
 
+import java.io.InputStream;
+
 public class CursoVO {
     private String titulo;
     private String instituicao;
@@ -7,18 +9,20 @@ public class CursoVO {
     private String dataInicio;
     private String dataFim;
     private Boolean possuiCertificado;
+    private InputStream certificado;
 
     public CursoVO() {
 
     }
 
-    public CursoVO(String titulo, String instituicao, String detalhamento, String dataInicio, String dataFim, Boolean possuiCertificado) {
+    public CursoVO(String titulo, String instituicao, String detalhamento, String dataInicio, String dataFim, Boolean possuiCertificado, InputStream certificado) {
         this.titulo = titulo;
         this.instituicao = instituicao;
         this.detalhamento = detalhamento;
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
         this.possuiCertificado = possuiCertificado;
+        this.certificado = certificado;
     }
 
     // <editor-fold desc="Getters e Setters" defaultstate="collapsed">
@@ -69,6 +73,14 @@ public class CursoVO {
 
     public void setPossuiCertificado(Boolean possuiCertificado) {
         this.possuiCertificado = possuiCertificado;
+    }
+
+    public InputStream getCertificado() {
+        return certificado;
+    }
+
+    public void setCertificado(InputStream certificado) {
+        this.certificado = certificado;
     }
 
     // </editor-fold>
