@@ -7,21 +7,24 @@ public class EnderecoVO {
     private String bairroLogradouro;
     private String cepLogradouro;
     private String complementoLogradouro;
-    private Boolean trabalhoAtual;
+    private String municipio;
+    private String uf;
 
     public EnderecoVO() {
 
     }
 
     public EnderecoVO(String tipoLogradouro, String nomeLogradouro, int numeroLogradouro,
-                      String bairroLogradouro, String cepLogradouro, String complementoLogradouro, Boolean trabalhoAtual) {
+                      String bairroLogradouro, String cepLogradouro, String complementoLogradouro,
+                      String municipio, String uf) {
         this.tipoLogradouro = tipoLogradouro;
         this.nomeLogradouro = nomeLogradouro;
         this.numeroLogradouro = numeroLogradouro;
         this.bairroLogradouro = bairroLogradouro;
         this.cepLogradouro = cepLogradouro;
         this.complementoLogradouro = complementoLogradouro;
-        this.trabalhoAtual = trabalhoAtual;
+        this.municipio = municipio;
+        this.uf = uf;
     }
 
     // <editor-fold desc="Getters e Setters" defaultstate="collapsed">
@@ -74,12 +77,20 @@ public class EnderecoVO {
         this.complementoLogradouro = complementoLogradouro;
     }
 
-    public Boolean isTrabalhoAtual() {
-        return trabalhoAtual;
+    public String getMunicipio() {
+        return municipio;
     }
 
-    public void setTrabalhoAtual(Boolean trabalhoAtual) {
-        this.trabalhoAtual = trabalhoAtual;
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
+    }
+
+    public String getUf() {
+        return uf;
+    }
+
+    public void setUf(String uf) {
+        this.uf = uf;
     }
 
     // </editor-fold>
