@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.formcloud.CheckLogin;
 import com.example.formcloud.R;
@@ -37,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
             openScreenPainelPrincipal(view);
         } else {
             // exibe mensagem de login incorreto
+            Toast.makeText(this, "Login incorreto", Toast.LENGTH_SHORT).show();
         }
     }
 
