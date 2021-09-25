@@ -32,13 +32,27 @@ public class LoginActivity extends AppCompatActivity {
         checkLogin = new CheckLogin();
         checkLogin.execute(loginUsername, loginPassword);
 
-        if (checkLogin.isSucess()) {
-            txtCampoUsuario.setText("");
-            txtCampoSenha.setText("");
-            openScreenPainelPrincipal(view);
+        if (isTodosCamposPreenchidos()) {
+            if (checkLogin.isSucess()) {
+                txtCampoUsuario.setText("");
+                txtCampoSenha.setText("");
+                openScreenPainelPrincipal(view);
+            } else {
+                Toast.makeText(this, "Login incorreto", Toast.LENGTH_SHORT).show();
+            }
         } else {
-            // exibe mensagem de login incorreto
-            Toast.makeText(this, "Login incorreto", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public boolean isTodosCamposPreenchidos() {
+        EditText txtCampoUsuario = (EditText) findViewById(R.id.txtLogin);
+        EditText txtCampoSenha = (EditText) findViewById(R.id.txtPassword);
+
+        if (txtCampoUsuario.getText().toString().isEmpty() || txtCampoSenha.getText().toString().isEmpty()) {
+            return Boolean.FALSE;
+        } else {
+            return Boolean.TRUE;
         }
     }
 
