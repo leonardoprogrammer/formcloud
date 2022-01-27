@@ -1,21 +1,22 @@
 package com.example.formcloud.data.model.vo;
 
 import java.io.InputStream;
+import java.util.GregorianCalendar;
 
 public class CursoVO {
     private String titulo;
     private String instituicao;
     private String detalhamento;
-    private String dataInicio;
-    private String dataFim;
+    private GregorianCalendar dataInicio;
+    private GregorianCalendar dataFim;
     private Boolean possuiCertificado;
-    private InputStream certificado;
+    private byte[] certificado;
 
     public CursoVO() {
 
     }
 
-    public CursoVO(String titulo, String instituicao, String detalhamento, String dataInicio, String dataFim, Boolean possuiCertificado, InputStream certificado) {
+    public CursoVO(String titulo, String instituicao, String detalhamento, GregorianCalendar dataInicio, GregorianCalendar dataFim, Boolean possuiCertificado, byte[] certificado) {
         this.titulo = titulo;
         this.instituicao = instituicao;
         this.detalhamento = detalhamento;
@@ -51,19 +52,19 @@ public class CursoVO {
         this.detalhamento = detalhamento;
     }
 
-    public String getDataInicio() {
+    public GregorianCalendar getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(String dataInicio) {
+    public void setDataInicio(GregorianCalendar dataInicio) {
         this.dataInicio = dataInicio;
     }
 
-    public String getDataFim() {
+    public GregorianCalendar getDataFim() {
         return dataFim;
     }
 
-    public void setDataFim(String dataFim) {
+    public void setDataFim(GregorianCalendar dataFim) {
         this.dataFim = dataFim;
     }
 
@@ -75,11 +76,11 @@ public class CursoVO {
         this.possuiCertificado = possuiCertificado;
     }
 
-    public InputStream getCertificado() {
+    public byte[] getCertificado() {
         return certificado;
     }
 
-    public void setCertificado(InputStream certificado) {
+    public void setCertificado(byte[] certificado) {
         this.certificado = certificado;
     }
 

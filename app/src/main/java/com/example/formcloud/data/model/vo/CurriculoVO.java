@@ -1,12 +1,13 @@
 package com.example.formcloud.data.model.vo;
 
+import java.util.GregorianCalendar;
 import java.util.List;
 
 public class CurriculoVO {
     private String nome;
-    private int idade;
+    private GregorianCalendar anoNascimento;
     private String naturalidade;
-    private List<EnderecoVO> enderecos;
+    private EnderecoVO endereco;
     private String primeiroTelefone;
     private String segundoTelefone;
     private String textoHistoricoCarreira;
@@ -22,14 +23,14 @@ public class CurriculoVO {
 
     }
 
-    public CurriculoVO(String nome, int idade, String naturalidade, List<EnderecoVO> enderecos,
+    public CurriculoVO(String nome, GregorianCalendar anoNascimento, String naturalidade, EnderecoVO endereco,
                        String primeiroTelefone, String segundoTelefone, String textoHistoricoCarreira,
                        String textoObjetivo, List<ExperienciaProfissionalVO> experiencias, Boolean openToWork,
                        String disponibilidade, List<CursoVO> cursos, List<String> softSkills, List<String> hardSkills) {
         this.nome = nome;
-        this.idade = idade;
+        this.anoNascimento = anoNascimento;
         this.naturalidade = naturalidade;
-        this.enderecos = enderecos;
+        this.endereco = endereco;
         this.primeiroTelefone = primeiroTelefone;
         this.segundoTelefone = segundoTelefone;
         this.textoHistoricoCarreira = textoHistoricoCarreira;
@@ -51,12 +52,12 @@ public class CurriculoVO {
         this.nome = nome;
     }
 
-    public int getIdade() {
-        return idade;
+    public GregorianCalendar getAnoNascimento() {
+        return anoNascimento;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setAnoNascimento(GregorianCalendar anoNascimento) {
+        this.anoNascimento = anoNascimento;
     }
 
     public String getNaturalidade() {
@@ -67,12 +68,12 @@ public class CurriculoVO {
         this.naturalidade = naturalidade;
     }
 
-    public List<EnderecoVO> getEnderecos() {
-        return enderecos;
+    public EnderecoVO getEndereco() {
+        return endereco;
     }
 
-    public void setEnderecos(List<EnderecoVO> enderecos) {
-        this.enderecos = enderecos;
+    public void setEndereco(EnderecoVO endereco) {
+        this.endereco = endereco;
     }
 
     public String getPrimeiroTelefone() {
